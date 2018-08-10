@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfMultiPageSizesSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMultiPageSizesSample"
+        Loaded="Window_Loaded"
+        mc:Ignorable="d"
+        Title="WpfMultiPageSizesSample" Height="270" Width="681">
+    <Grid>
+        <Label x:Name="label" Content="1 ページ目" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="page1" HorizontalAlignment="Left" Margin="92,14,0,0" VerticalAlignment="Top" Width="184"/>
+        <Label x:Name="label1" Content="2 ページ目" HorizontalAlignment="Left" Margin="28,41,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="page2" HorizontalAlignment="Left" Margin="92,45,0,0" VerticalAlignment="Top" Width="184"/>
+        <Label x:Name="label2" Content="3 ページ目" HorizontalAlignment="Left" Margin="28,72,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="page3" HorizontalAlignment="Left" Margin="92,76,0,0" VerticalAlignment="Top" Width="184"/>
+        <Button x:Name="printNow" Content="印刷なう" HorizontalAlignment="Left" Margin="92,123,0,0" VerticalAlignment="Top" Width="75"
+                Click="printNow_Click"
+                />
+        <GroupBox x:Name="groupBox" Header="印刷コンテンツ (Visual クラス または その派生)" HorizontalAlignment="Left" Margin="380,14,0,0" VerticalAlignment="Top" Height="199" Width="256">
+            <Grid Name="printContents">
+                <Label x:Name="label3" Content="Hello WPF!" HorizontalAlignment="Left" Margin="28,29,0,0" VerticalAlignment="Top"
+                       FontSize="32"/>
+            </Grid>
+        </GroupBox>
+        <TextBlock x:Name="selectedSize1" HorizontalAlignment="Left" Margin="281,14,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="22" Width="94"/>
+        <TextBlock x:Name="selectedSize2" HorizontalAlignment="Left" Margin="281,45,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="22" Width="94"/>
+        <TextBlock x:Name="selectedSize3" HorizontalAlignment="Left" Margin="281,77,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="22" Width="94"/>
+
+    </Grid>
+</Window>
